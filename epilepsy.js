@@ -24,15 +24,13 @@ function randomSixteen(){
 function randoBG(cycleTime, target) {
 	//create empty array for hexcode
 	var hexcode = [];
-	var time = cycleTime;
-	var tgt = target;
 
 	//fill hexcode array with hex digits
 	for(i=0;i<6;i++){
 		hexcode[i] = hexadecimal[randomSixteen()];
 	}
 
-	console.log(hexcode);
+	//console.log(hexcode);
 
 	//create a hexcodeString variable as an empty string
 	var hexcodeString ="";
@@ -40,7 +38,7 @@ function randoBG(cycleTime, target) {
 	//concatenate one through six into one variable
 	for(i=0;i<6;i++){
 		hexcodeString = hexcodeString + hexcode[i];
-		console.log(hexcodeString);
+		//console.log(hexcodeString); //debug
 	}
 
 	$(target).css({'background-color':hexcodeString});
